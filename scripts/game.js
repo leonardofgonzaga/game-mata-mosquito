@@ -1,14 +1,27 @@
-// Ajustar tamanho do palco do jogo
-
 var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 10
+var criaMosquitoTempo = 1500
+
+// Aplicando nivel de dificuldade
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if (nivel === 'normal') {
+    criaMosquitoTempo = 1500
+} else if (nivel === 'dificil') {
+    criaMosquitoTempo = 1000
+} else if (nivel === 'chucknorris') {
+    criaMosquitoTempo = 750
+}
+
+// Ajustar tamanho do palco do jogo
 
 function ajustarTamanhoPalcoJogo() {
     altura = window.innerHeight
     largura = window.innerWidth
-
     console.log(altura, largura)
 }
 
@@ -109,6 +122,6 @@ function iniciarJogo() {
         return false
     }
 
-    alert(nivel)
+    window.location.href = "app.html?" + nivel
 }
  
