@@ -23,11 +23,11 @@ var cronometro = setInterval(function() {
     if (tempo < 0) {
         clearInterval(cronometro)
         clearInterval(criaMosquito)
-        alert('Vitória')
+        window.location.href = 'win.html'
     } else {
         document.getElementById('cronometro').innerHTML = tempo
     }
-    
+
 }, 1000)
 
 // Posições randomicas
