@@ -14,7 +14,7 @@ body {
 
 .menu, .win-screen, .game-over {
     width: 100vw;
-    height: 100ch;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
